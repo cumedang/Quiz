@@ -1,0 +1,104 @@
+form{
+    width: 480px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 100px;
+    flex-direction: column;
+    margin-left: 350px;
+    transform: scale(1.1);
+    position: relative;
+   
+}
+
+
+    
+form::after{
+    content: '';
+    z-index: 1;
+    
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    border: 5px solid #555;
+    border-top-left-radius: 280px;
+    border-bottom-right-radius: 280px;
+}
+
+
+
+
+form::before{
+    content: '';
+    z-index: 1;
+    
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 500px;
+
+    background-color: white;
+    border-radius: 10px;
+    border: 5px solid #555;
+    border-top-right-radius: 300px;
+    border-bottom-left-radius: 300px;
+}
+form h1{
+    color: #555;
+    z-index: 2;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+form input{
+    z-index: 2;
+    outline: none;
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 10px 10px 14px;
+    transition: 0.35s;
+    border: 2px solid #ddd;
+}
+
+form input:nth-of-type(1){
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 2px solid transparent;
+}
+
+form input:focus{
+    border: 2px solid #555;
+    color: #555;
+}
+
+form input:focus::placeholder{
+    color: #555;
+}
+
+form input[type="submit"]{
+    color: white;
+    border: none;
+    margin-top: 40px;
+    border-radius: 50px;
+    font-size: 30px;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 0.35s;
+    background-color: #555;
+}
+
+form input[type="submit"]:hover{
+    transform: scale(0.9);
+}
+
+form input:nth-of-type(2){
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
